@@ -1,8 +1,8 @@
 POST http://localhost:3001/api/notes/ HTTP/1.1
-content-type: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjY2ODRjNTFlNDZkN2Y2OTNkYzhhNjEwMyIsImlhdCI6MTcxOTk4MTc4NX0.r1I2kuOrjVMDyrkyhscsQrmJbaedMqpwxb-tEo2Kl-g
 
 {
-    "content": "User id of the note create is at the start sent along the request",
-    "important": true,
-    "userId": "6684c51e46d7f693dc8a6103"
+    "content": "[REAL] Token authentication works!",
+    "important": true
 }

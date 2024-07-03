@@ -11,7 +11,8 @@ usersRouter.post('/', async (request, response) => {
     const user = new User({
         username,
         name,
-        passwordHash,
+        passwordHash
+
     })
 
     const savedUser = await user.save()
@@ -19,7 +20,7 @@ usersRouter.post('/', async (request, response) => {
 })
 
 usersRouter.get('/', async (request, response) => {
-    const users = await User.find({}).populate('notes', {'content': 1, 'important': 1 }) // finds notes property and checks for ids correponding to Note model or documents and displays them
+    const users = await User.find({}).populate('notes', { 'content': 1, 'important': 1 }) // finds notes property and checks for ids correponding to Note model or documents and displays them
     response.json(users)
 })
 
